@@ -27,7 +27,7 @@ struct MixedPoint<T, U> {
 
 // Here we use different names for the generic types to better communicate what is happening
 // Note the genreic names used in the function are different to those used in the impl block
-// These do not need to be defined in the impl block as they used in the method alone
+// The second set of generics do not need to be defined in the impl block as they are only used in the method
 impl<X1, Y1> MixedPoint<X1, Y1> {
     fn mixup<X2, Y2>(self, other: MixedPoint<X2, Y2>) -> MixedPoint<X1, Y2> {
         MixedPoint {
@@ -37,30 +37,30 @@ impl<X1, Y1> MixedPoint<X1, Y1> {
     }
 }
 
-//fn largest<T>(list: &[T]) -> &T {
-//    // Generic function
-//    let mut largest = &list[0];
+fn largest<T: std::cmp::PartialOrd>(list: &[T]) -> &T {
+    // Generic function
+    let mut largest = &list[0];
 
-//    for item in list {
-//        if item > largest {
-//            largest = item;
-//        }
-//    }
+    for item in list {
+        if item > largest {
+            largest = item;
+        }
+    }
 
-//    largest
-//}
+    largest
+}
 
 fn main() {
     // Using a generic function
     let numbers = vec![23, 50, 25, 100, 65];
-    //let result = largest(&numbers);
+    let result = largest(&numbers);
 
-    //println!("The largest number is {}", result);
+    println!("The largest number is {}", result);
 
     let chars = vec!['y', 'm', 'a', 'q'];
-    //let result = largest(&chars);
+    let result = largest(&chars);
 
-    //println!("The largest char is {}", result);
+    println!("The largest char is {}", result);
 
     //=========
     // Using generic structs
@@ -72,4 +72,10 @@ fn main() {
 
     // Also OK if they are the same
     let mixed_int_point = MixedPoint { x: 1, y: 2 };
+
+    //=========
+    // Using generic methods
+    let point_one = MixedPoint { x: 5, y: 10 };
+    let point_two = MixedPoint { x: 50, y: 10 };
+    let point_three = point_one.mixup(point_two);
 }

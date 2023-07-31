@@ -1,0 +1,1 @@
+/Users/stevehutchins/Projects/TTPC/learning-rust/10_generics_types_traits_lifetimes/traits/target/debug/traits: /Users/stevehutchins/Projects/TTPC/learning-rust/10_generics_types_traits_lifetimes/traits/src/main.rs

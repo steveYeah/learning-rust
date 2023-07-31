@@ -1,1 +1,1 @@
-/Users/stevehutchins/Projects/TTPC/rust/10_generics_types_traits_lifetimes/generic_date_types/target/debug/generic_date_types: /Users/stevehutchins/Projects/TTPC/rust/10_generics_types_traits_lifetimes/generic_date_types/src/main.rs
+/Users/stevehutchins/Projects/TTPC/learning-rust/10_generics_types_traits_lifetimes/generic_date_types/target/debug/generic_date_types: /Users/stevehutchins/Projects/TTPC/learning-rust/10_generics_types_traits_lifetimes/generic_date_types/src/main.rs
